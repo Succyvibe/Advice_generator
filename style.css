@@ -1,5 +1,100 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Red+Rose:wght@400;600;700&display=swap");
 
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
   font-family: "Manrope", sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  position: relative;
+  background: hsl(218, 23%, 16%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adviceCard {
+  position: relative;
+  background: hsl(217, 19%, 24%);
+  width: 90%;
+  padding: 2rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.adviceCard_contents {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.adviceCard_contents-advice-id {
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(150, 100%, 66%);
+}
+
+.adviceCard_contents-advice-id span {
+  margin-left: 5px;
+}
+
+.adviceCard_contents-advice {
+  color: hsl(193, 38%, 86%);
+  font-size: 28px;
+}
+
+.line-break {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.line-break::before {
+  border-top: 1px solid hsl(193, 38%, 86%);
+  flex: 1;
+  content: "";
+}
+.line-break::after {
+  border-top: 1px solid hsl(193, 38%, 86%);
+  flex: 1;
+  content: "";
+}
+
+.adviceCard_button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: hsl(150, 100%, 66%);
+  position: absolute;
+  bottom: -17%;
+  left: 50%;
+  transform: translate(-50%, -17%);
+  -webkit-transform: translate(-50%, -17%);
+  -moz-transform: translate(-50%, -17%);
+  -ms-transform: translate(-50%, -17%);
+  -o-transform: translate(-50%, -17%);
 }

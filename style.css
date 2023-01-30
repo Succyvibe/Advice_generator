@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Red+Rose:wght@400;600;700&display=swap");
 
+:root {
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+  --darkGrayishBlue: hsl(217, 19%, 24%);
+  --darkBlue: hsl(218, 23%, 16%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,14 +46,16 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
   padding-bottom: 30px;
 }
 
 .adviceCard_contents-advice-id {
-  font-size: 12px;
-  font-weight: 500;
-  color: hsl(150, 100%, 66%);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: var(--neonGreen);
 }
 
 .adviceCard_contents-advice-id span {
@@ -56,6 +65,7 @@ body {
 .adviceCard_contents-advice {
   color: hsl(193, 38%, 86%);
   font-size: 28px;
+  font-weight: 800;
 }
 
 .line-break {
@@ -101,10 +111,11 @@ body {
   -o-transform: translate(-50%, -7%);
 }
 
-/* .adviceCard_button:active {
-  
-} */
-
+.adviceCard_button:hover,
+.adviceCard_button:active {
+  cursor: pointer;
+  box-shadow: var(--neonGreen) 0px 0px 20px 1px;
+}
 /* media querries */
 
 @media screen and (min-width: 650px) {
@@ -119,7 +130,7 @@ body {
 
 @media screen and (min-width: 1440px) {
   .adviceCard {
-    width: 40%;
+    max-width: 550px;
   }
 
   .adviceCard_button {

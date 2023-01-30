@@ -69,21 +69,16 @@ body {
 }
 
 .line-break {
-  width: 100%;
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
 }
 
-.line-break::before {
-  border-top: 1px solid hsl(193, 38%, 86%);
-  flex: 1;
-  content: "";
+.line-break .mobile {
+  display: flex;
 }
-.line-break::after {
-  border-top: 1px solid hsl(193, 38%, 86%);
-  flex: 1;
-  content: "";
+.line-break .desktop {
+  display: none;
 }
 
 .adviceCard_button {
@@ -104,6 +99,7 @@ body {
   position: absolute;
   bottom: -7%;
   left: 50%;
+  transition: 0.4s linear ease-in-out;
   transform: translate(-50%, -7%);
   -webkit-transform: translate(-50%, -7%);
   -moz-transform: translate(-50%, -7%);
@@ -123,6 +119,12 @@ body {
     width: 60%;
   }
 
+  .line-break .desktop {
+    display: flex;
+  }
+  .line-break .mobile {
+    display: none;
+  }
   .adviceCard_button {
     bottom: -9%;
   }
@@ -136,4 +138,20 @@ body {
   .adviceCard_button {
     bottom: -9%;
   }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: var(--neonGreen);
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+}
+
+.attribution a {
+  color: #fff;
 }

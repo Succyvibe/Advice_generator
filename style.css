@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-bottom: 30px;
 }
 
 .adviceCard_contents-advice-id {
@@ -87,14 +88,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   background: hsl(150, 100%, 66%);
   position: absolute;
-  bottom: -17%;
+  bottom: -7%;
   left: 50%;
-  transform: translate(-50%, -17%);
-  -webkit-transform: translate(-50%, -17%);
-  -moz-transform: translate(-50%, -17%);
-  -ms-transform: translate(-50%, -17%);
-  -o-transform: translate(-50%, -17%);
+  transform: translate(-50%, -7%);
+  -webkit-transform: translate(-50%, -7%);
+  -moz-transform: translate(-50%, -7%);
+  -ms-transform: translate(-50%, -7%);
+  -o-transform: translate(-50%, -7%);
+}
+
+/* .adviceCard_button:active {
+  
+} */
+
+/* media querries */
+
+@media screen and (min-width: 650px) {
+  .adviceCard {
+    width: 60%;
+  }
+
+  .adviceCard_button {
+    bottom: -9%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .adviceCard {
+    width: 40%;
+  }
+
+  .adviceCard_button {
+    bottom: -9%;
+  }
 }
